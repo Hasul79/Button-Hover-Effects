@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #28272a;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 220px;
+    height: 60px;
+    background: rgba(255,255,255, 0.1);
+    border-radius: 60px;
+    color: rgba(255,255,255, 0.5);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 30px;
+    border-top: 0.75px solid rgba(255,255,255, 0.35);
+    border-left: 0.75px solid rgba(255,255,255, 0.35);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.btn:hover {
+    padding-left: 0px;
+    padding-right: 40px;
+    color: rgba(255,255,255, 1);
+}
+.btn span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    font-size: 30px;
+    position: absolute;
+    left: 5px;
+    width: 55px;
+    height: 55px;
+    background: #f604fe;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    
+}
+.btn:hover span {
+    left: calc(100% - 60px);
+}
+.btn::after {
+    content: "";
+    position: absolute;
+    width: 235px;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(255,255,255, 0.72);
+    transform: translateX(-170px) skewX(30deg);
+    transition: 0.75s ease-in-out;
+}
+.btn:hover:after {
+    transform: translateX(170px) skewX(30deg)
+
+}
